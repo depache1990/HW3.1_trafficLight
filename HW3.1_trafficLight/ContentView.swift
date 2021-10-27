@@ -17,19 +17,23 @@ struct ContentView: View {
     @State private var redLight = 0.3
     @State private var yellowLight = 0.3
     @State private var greenLight = 0.3
+    
+    @State private var titleOfButton = "START"
     var body: some View {
-        ZStack{
+        
         VStack {
         CirclesTraficLight(color: .red, opacity: redLight)
         CirclesTraficLight(color: .yellow, opacity: yellowLight)
         CirclesTraficLight(color: .green, opacity: greenLight)
                 Spacer()
             getColorButton(label: "Start") {
-                
+                if titleOfButton == "START" {
+                    titleOfButton = "NEXT"
+                }
                 changeColor()
             }
         }
-        }
+        
     }
     private func changeColor() {
             
