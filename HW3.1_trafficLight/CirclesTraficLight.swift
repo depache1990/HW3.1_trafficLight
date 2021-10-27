@@ -1,0 +1,30 @@
+//
+//  CirclesTraficLight.swift
+//  HW3.1_trafficLight
+//
+//  Created by Anton Duplin on 26/10/21.
+//
+
+import SwiftUI
+
+
+struct CirclesTraficLight: View {
+
+    let color: Color
+    let opacity: Double
+    var body: some View {
+        
+            Circle()
+                .foregroundColor(color)
+                .opacity(0.3)
+                .frame(width: 80, height: 80)
+                .overlay(Circle().stroke(Color.white, lineWidth: 4))
+                .shadow(radius: 10)
+        
+    }
+}
+struct CirclesTraficLight_Previews: PreviewProvider {
+    static var previews: some View {
+        CirclesTraficLight(color: .red, opacity: 1)
+    }
+}
