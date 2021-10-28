@@ -22,8 +22,8 @@ struct getColorButton: View {
         . cornerRadius(25)
         .buttonStyle(.bordered)
         .tint(.blue)
-        .overlay(RoundedRectangle(cornerRadius: 20) .stroke(.white, lineWidth: 4))
-                    
+        .overlay(RoundedRectangle(cornerRadius: 20).stroke(.white, lineWidth: 4))
+        
         
         
         

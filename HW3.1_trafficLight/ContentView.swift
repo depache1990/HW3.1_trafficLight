@@ -22,10 +22,10 @@ struct ContentView: View {
     var body: some View {
         
         VStack {
-        CirclesTraficLight(color: .red, opacity: redLight)
-        CirclesTraficLight(color: .yellow, opacity: yellowLight)
-        CirclesTraficLight(color: .green, opacity: greenLight)
-                Spacer()
+            CirclesTraficLight(color: .red, opacity: redLight)
+            CirclesTraficLight(color: .yellow, opacity: yellowLight)
+            CirclesTraficLight(color: .green, opacity: greenLight)
+            Spacer()
             getColorButton(label: "Start") {
                 if titleOfButton == "START" {
                     titleOfButton = "NEXT"
@@ -36,25 +36,25 @@ struct ContentView: View {
         
     }
     private func changeColor() {
-            
-            let lightIsOn = 1.0
-            let lightIsOff = 0.3
-            
-            switch currentLight {
-            case .red:
-                currentLight = .yellow
-                greenLight = lightIsOff
-                redLight = lightIsOn
-            case .yellow:
-                currentLight = .green
-                redLight = lightIsOff
-                yellowLight = lightIsOn
-            case .green:
-                currentLight = .red
-                greenLight = lightIsOn
-                yellowLight = lightIsOff
-            }
+        
+        let lightIsOn = 1.0
+        let lightIsOff = 0.3
+        
+        switch currentLight {
+        case .red:
+            currentLight = .yellow
+            greenLight = lightIsOff
+            redLight = lightIsOn
+        case .yellow:
+            currentLight = .green
+            redLight = lightIsOff
+            yellowLight = lightIsOn
+        case .green:
+            currentLight = .red
+            greenLight = lightIsOn
+            yellowLight = lightIsOff
         }
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
