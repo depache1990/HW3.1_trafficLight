@@ -16,9 +16,13 @@ struct getColorButton: View {
         Button(action: action) {
             Text(label)
                 .font(.title)
-                .foregroundColor(Color.blue)
-                .frame(maxWidth: 130.0)
+                .foregroundColor(Color.white)
+                .fontWeight(.bold)
+                
         }
+        .padding()
+        .frame(width: 200, height: 60)
+        .background(Color(.blue))
         . cornerRadius(25)
         .buttonStyle(.bordered)
         .tint(.blue)
